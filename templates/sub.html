@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>MALBoost: GRNBoost2 for malaria researchers</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="static/css/styles.css" rel="stylesheet" />
+    <link rel="icon" sizes="180x180" href="/static/img/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Upload files for MALBoost </a><button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h2></h2>
+    <h2></h2>
+    <!-- Upload Section-->
+    <section class="page-section bg-white text-dark mb-0" id="upload">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-dark"></h2>
+            <h2 class="page-section-heading text-center text-uppercase text-dark"></h2>
+
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Select Transcriptome</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="expression" id="expression">
+                        <label class="custom-file-label" for="expression">Select File...</label>
+                    </div>
+                    <label style="margin-top: 30px;">Select Regulators List</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="regulators" id="regulators">
+                        <label class="custom-file-label" for="regulators">Select File...</label>
+                    </div>
+                    <h2></h2>
+                    <div class="custom-file" style="margin-top: 30px;">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <label>Select Analysis Type</label>
+                        <select name="myList">
+                     <option value="GRNBoost2">GRNBoost2</option>
+                     <option value="GENIE3">GENIE3</option>
+                  </select>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $('.custom-file input').change(function(e) {
+                        var files = [];
+                        for (var i = 0; i < $(this)[0].files.length; i++) {
+                            files.push($(this)[0].files[i].name);
+                        }
+                        $(this).next('.custom-file-label').html(files.join(', '));
+                    });
+                </script>
+                <button type="submit" class="btn btn-primary">Upload file</button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- How Section-->
+    <section class="page-section bg-dark text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">HOW</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center">
+                    <p class="lead">First upload the transcriptome which you want to analyse. File formats supported are (.tsv, .txt, .csv).</p>
+                    <img class="masthead-avatar mb-5" src="static/img/expressionset.png" alt="" />
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <p class="lead">Upload a list of regulatory genes. File format needs to be (.tsv, .txt, .csv) with genes in a single column</p>
+                    <img class="masthead-avatar mb-5" src="static/img/genelist.png" alt="" />
+                </div>
+            </div>
+            <!-- Footer Logo section-->
+            <div class="text-center mt-4">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="static/img/tuks.png" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">Lynnwood Rd, Hatfield<br />Pretoria, 0002</p>
+                </div>
+                <!-- Footer space Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4"></h4>
+                    <p class="lead mb-0"></p>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">Further Reading</h4>
+                    <p class="lead mb-0">Follow DOI: <a href="https://doi.org/10.1093/bioinformatics/bty916">10.1093/bioinformatics/bty916</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <section class="copyright py-4 text-center text-white">
+        <div class="container"><small><p>Copyright &copy; <script>document.write(new Date().getFullYear())</script></p></small></div>
+    </section>
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    <div class="scroll-to-top d-lg-none position-fixed">
+        <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+
+</body>
+
+</html>
