@@ -108,7 +108,7 @@ Please see documentation for [Redis](https://redis.io) more detail
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/roelof89/malboost.git
    ```
 2. Install python packages
    ```sh
