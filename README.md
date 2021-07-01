@@ -156,6 +156,7 @@ Your Name - roelofvanwyk89@gmail.com
 * [Aertslab](https://github.com/aertslab/arboreto)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
+* [Bootstrap](https://stackpath.bootstrapcdn.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
