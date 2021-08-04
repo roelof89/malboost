@@ -147,7 +147,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - roelofvanwyk89@gmail.com
+Rudi - roelofvanwyk89@gmail.com
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
